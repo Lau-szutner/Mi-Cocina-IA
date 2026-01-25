@@ -8,3 +8,7 @@ export default function RootLayout() {
     </Stack>
   );
 }
+
+
+// FALTA AGREGAR     "react-native-safe-area-context": "~5.6.0",
+// EXPO-VECTOR-ICONS
