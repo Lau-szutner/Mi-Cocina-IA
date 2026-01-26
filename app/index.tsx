@@ -31,15 +31,28 @@ export default function Index() {
           <ItemCard key={item.id} name={item.nombre} cantidad={item.cantidad} state={item.state} />
         ))}
 
-        <View>
-          <Link href="/profile" className="text-center">
+        <View className="place-items-center gap-5">
+          <Link
+            href="/profile"
+            className=" align-items-center h-10 w-6/12 place-content-center rounded-md bg-slate-500 text-center text-white">
             Profile
           </Link>
-          <Link href="/about" className="text-center">
+          <Link
+            href="/about"
+            className=" align-items-center h-10 w-6/12 place-content-center rounded-md bg-slate-500 text-center text-white">
             about
           </Link>
-          <Link href="/items" className="text-center">
-            items
+
+          <Link
+            href="/items"
+            className=" align-items-center h-10 w-6/12 place-content-center rounded-md bg-slate-500 text-center text-white">
+            Items
+          </Link>
+
+          <Link
+            href="/HoneyPathTestOne/Lautaro"
+            className=" align-items-center h-10 w-6/12 place-content-center rounded-md bg-slate-500 text-center text-white">
+            HoneyPastTestOne
           </Link>
         </View>
         {/* <Link href="/receta" asChild>
