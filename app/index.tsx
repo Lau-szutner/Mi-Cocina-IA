@@ -1,6 +1,6 @@
 // app/index.tsx
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
 // Ajustamos el path: como estamos en /app, subimos un nivel para ir a /components
 import ItemCard from '../components/ItemCard';
@@ -18,7 +18,7 @@ const MIS_PRODUCTOS: Array<{ id: string; nombre: string; cantidad: string; state
 
 export default function Index() {
   return (
-    <SafeAreaView className="flex-1 bg-slate-50">
+    <View className="flex-1 bg-slate-50">
       <TopBarTitle />
       <AddIngredient />
 
@@ -31,38 +31,20 @@ export default function Index() {
           <ItemCard key={item.id} name={item.nombre} cantidad={item.cantidad} state={item.state} />
         ))}
 
-        <View className="place-items-center gap-5">
-          <Link
-            href="/profile"
-            className=" align-items-center h-10 w-6/12 place-content-center rounded-md bg-slate-500 text-center text-white">
-            Profile
-          </Link>
-          <Link
-            href="/about"
-            className=" align-items-center h-10 w-6/12 place-content-center rounded-md bg-slate-500 text-center text-white">
-            about
-          </Link>
-
+        <View className="items-center gap-5">
           <Link
             href="/items"
-            className=" align-items-center h-10 w-6/12 place-content-center rounded-md bg-slate-500 text-center text-white">
+            className="h-fit w-6/12 rounded-md bg-slate-500 p-4 text-center text-white">
             Items
           </Link>
 
           <Link
             href="/HoneyPathTestOne/Lautaro"
-            className=" align-items-center h-10 w-6/12 place-content-center rounded-md bg-slate-500 text-center text-white">
+            className="h-fit w-6/12 rounded-md bg-slate-500 p-4 text-center text-white">
             HoneyPastTestOne
           </Link>
         </View>
-        {/* <Link href="/receta" asChild>
-          <TouchableOpacity className="mt-4 rounded-2xl bg-slate-800 p-5">
-            <Text className="text-center text-lg font-bold text-white">
-              🪄 Generar Receta con IA
-            </Text>
-          </TouchableOpacity>
-        </Link> */}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }

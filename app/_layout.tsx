@@ -1,14 +1,10 @@
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack } from 'expo-router';
-import '../global.css';
 
 export default function RootLayout() {
   return (
-    <Stack screenOptions={{ headerShown: true }}>
-      <Stack.Screen name="(tabs)" />
-    </Stack>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Stack />
+    </SafeAreaView>
   );
 }
-
-
-// FALTA AGREGAR     "react-native-safe-area-context": "~5.6.0",
-// EXPO-VECTOR-ICONS

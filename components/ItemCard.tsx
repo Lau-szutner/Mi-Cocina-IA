@@ -26,21 +26,15 @@ export default function ItemCard({ name, cantidad, state }: Props) {
   };
 
   return (
-    <View className="mb-3 flex-row items-center justify-between rounded-2xl border border-slate-50 bg-white px-4 py-4 shadow-2xl">
+    <View className="mb-3 flex-row items-center justify-between rounded-2xl border border-slate-50 bg-white px-4 py-4 shadow-xl">
       <View>
-        <Text className="text-lg font-semibold text-slate-600">
-          {name}
-        </Text>
-        <Text className="text-slate-400">
-          {cantidad} Unidades
-        </Text>
+        <Text className="text-lg font-semibold text-slate-600">{name}</Text>
+        <Text className="text-slate-400">{cantidad} Unidades</Text>
       </View>
 
       {state && (
         <View className={`rounded-full ${getStateColor(state)} px-3 py-1`}>
-          <Text className="text-white font-medium">
-            {state}
-          </Text>
+          <Text className="font-medium text-white">{state}</Text>
         </View>
       )}
     </View>
