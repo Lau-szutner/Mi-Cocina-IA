@@ -6,6 +6,7 @@ import { Link } from 'expo-router';
 import ItemCard from '../components/ItemCard';
 import TopBarTitle from '../components/TopBarTitle';
 import AddIngredient from '../components/AddIngredient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type ItemState = 'Fresh' | 'Urgent' | 'Frozen' | 'Expired';
 
@@ -18,7 +19,7 @@ const MIS_PRODUCTOS: Array<{ id: string; nombre: string; cantidad: string; state
 
 export default function Index() {
   return (
-    <View className="flex-1 bg-slate-50">
+    <SafeAreaView className="flex-1 bg-slate-50">
       <TopBarTitle />
       <AddIngredient />
 
@@ -45,6 +46,6 @@ export default function Index() {
           </Link>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
